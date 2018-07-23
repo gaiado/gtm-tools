@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    title GTM Tools
+  body.logout
+    nav.navbar.navbar-expand.navbar-dark.bg-dark.mb-4
+      a.navbar-brand(href='#') GTM Tools
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Tags 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') Variables
+          li.nav-item
+            a.nav-link(href='#') Triggers
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a#btn-signin.nav-link(href='#' onclick='handleSignInClick()') Sign In
+          li#btn-signout.nav-item.dropdown
+            a#lbl-name.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            .dropdown-menu.dropdown-menu-right(aria-labelledby='lbl-name')
+              a.dropdown-item(href='#' onclick='handleSignOutClick()') Sign Out
+
+    #container.container-fluid
+      .row
+        .col-md-4.col-sm-6
+          .form-group.row
+            label.col-5.col-sm-6.col-form-label Account
+            .col-7.col-sm-6
+              select#cbo-account.form-control
+        .col-md-4.col-sm-6
+          .form-group.row
+            label.col-5.col-sm-6.col-form-label Container
+            .col-7.col-sm-6
+              select#cbo-container.form-control
+        .col-md-4.col-sm-6
+          .form-group.row
+            label.col-5.col-sm-6.col-form-label Work Space
+            .col-7.col-sm-6
+              select#cbo-workspace.form-control
+        .col-12
+          .form-group.row
+            .col-8.col-sm-9.col-md-10
+              input.form-control(type='text')
+            .col-4.col-sm-3.col-md-2
+              button#btn-search.btn.btn-primary.btn-block(type='button') Search
+      block content     
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='/modules/jquery/jquery.slim.min.js')
+    script(src='/modules/popper.js/popper.min.js')
+    script(src='/modules/bootstrap/js/bootstrap.min.js')
+    script(async='', defer='', src='https://apis.google.com/js/api.js', onload='this.onload=function(){};handleClientLoad()', onreadystatechange="if (this.readyState === 'complete') this.onload()")
+    script(src='/javascripts/layout.js')  
+    script(src='/javascripts/index.js')

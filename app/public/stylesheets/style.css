@@ -1,0 +1,8 @@
+body #btn-signin {
+  display: none; }
+
+body.logout #btn-signout, body.logout #container {
+  display: none; }
+
+body.logout #btn-signin {
+  display: block; }

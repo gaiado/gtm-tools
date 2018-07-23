@@ -1,0 +1,13 @@
+body{
+  #btn-signin{
+    display: none;
+  }
+  &.logout{
+    #btn-signout,#container{
+      display: none;
+    }
+    #btn-signin{
+      display: block;
+    }
+  }
+}
