@@ -49,9 +49,14 @@ html
             .col-7.col-sm-6
               select#cbo-workspace.form-control
         .col-12
-          .form-group.row
-            .col-8.col-sm-9.col-md-10
+          .form-group.row            
+            .col-6.col-sm-7.col-md-8
               input.form-control(type='text')
+            .col-2
+              .btn-group.btn-group-toggle(data-toggle='buttons')
+                label.btn.btn-outline-primary(title='Regex')
+                  input#option1(type='checkbox', name='options', autocomplete='off')
+                  | .*
             .col-4.col-sm-3.col-md-2
               button#btn-search.btn.btn-primary.btn-block(type='button') Search
       block content     
