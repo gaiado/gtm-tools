@@ -1,10 +1,12 @@
-let cboAccount, cboContainer, cboWorkspace;
+let cboAccount, cboContainer, cboWorkspace,checkRegex,txtSearch;
 let init = function () {
     document.body.className = '';
 
     cboAccount = document.getElementById('cbo-account');
     cboContainer = document.getElementById('cbo-container');
     cboWorkspace = document.getElementById('cbo-workspace');
+    checkRegex = document.getElementById('check-regex');
+    txtSearch = document.getElementById('txt-search');
 
     cboAccount.addEventListener('change', function () {
         containerList(this.value);
@@ -13,6 +15,8 @@ let init = function () {
     cboContainer.addEventListener('change', function () {
         containerList(this.value);
     });
+
+    txtSearch.addEventListener('keyup',search);
 
     accountList();
 };

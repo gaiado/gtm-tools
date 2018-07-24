@@ -6,7 +6,7 @@
   "scripts": {
     "express": "node ./app/bin/www",
     "electron": "electron .",
-    "start": "npm run express && npm run electron"
+    "start": "npm run express & npm run electron & wait"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
