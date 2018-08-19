@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Collapse,
   Navbar,
@@ -13,35 +13,34 @@ import {
   DropdownItem
 } from 'reactstrap';
 
-export default class Example extends React.Component {
+export default class Menu extends Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
+    
     this.state = {
       isOpen: false
     };
   }
-  toggle() {
+  toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
   render() {
     return (
-      <Navbar color="dark" dark expand="md">
+      <Navbar color="dark" dark expand="md" className="mb-4">
         <NavbarBrand href="/">GTM Tools</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">Tags</NavLink>
+              <NavLink href="/">Tags</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/reactstrap/">Variables</NavLink>
+              <NavLink href="/variables/">Variables</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/reactstrap/">Triggers</NavLink>
+              <NavLink href="/triggers/">Triggers</NavLink>
             </NavItem>
           </Nav>
           <Nav className="ml-auto" navbar>
